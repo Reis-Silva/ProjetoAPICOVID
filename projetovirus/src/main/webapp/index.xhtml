@@ -17,72 +17,96 @@
 
 <h:body>
 	<h:form>
-	
+
 		<div align="center">
-			<p:graphicImage library="img" name="virus.jpg" width="300"></p:graphicImage>
+			<p:graphicImage library="img" name="virus.jpg" width="200"></p:graphicImage>
 			<h:outputLabel>#{paisController.pais.datetime}</h:outputLabel>
-		</div>
-		<br/>
-		
-		<p:dataTable id="tablevirus" value="#{paisController.estados}" var="v" width="800px" style="width: auto;"
-			paginator="true" rows="15"  widgetVar="tVirus" 
-			paginatorTemplate="{CurrentPageReport} {FirstPageLink} {PreviousPageLink} {PageLinks} {NextPageLink} {LastPageLink} {RowsPerPageDropdown}"
-			currentPageReportTemplate="{startRecord}-{endRecord} of {totalRecords} records"
-			paginatorPosition="bottom" rowsPerPageTemplate="15">
-
-
-			<p:column filterBy="#{v.state}" filterMatchMode="contains" >
-				<f:facet name="header">
-					<p:outputLabel value="Estado" />
-				</f:facet>
-				<h:outputLabel value="#{v.state}" />
-			</p:column>
-
-			<p:column>
-				<f:facet name="header">
-					<p:outputLabel value="Nº de Casos" />
-				</f:facet>
-				<h:outputLabel value="#{v.cases}" />
-			</p:column>
-
-			<p:column>
-				<f:facet name="header">
-					<p:outputLabel value="Nº de Mortes" />
-				</f:facet>
-				<h:outputLabel value="#{v.deaths}" />
-			</p:column>
-
-			<p:column>
-				<f:facet name="header">
-					<p:outputLabel value="Nº de Casos Suspeitos" />
-				</f:facet>
-				<h:outputLabel value="#{v.suspects}" />
-			</p:column>
-
-			<p:column>
-				<f:facet name="header">
-					<p:outputLabel value="Atualiação" />
-				</f:facet>
-				<h:outputLabel value="#{v.datetime}">
-					<f:convertDateTime pattern="dd/MM/yyyy" />
-				</h:outputLabel>
-			</p:column>
-
-			<h:outputLabel value="#{v.datetime}">
-					<f:convertDateTime pattern="dd/MM/yyyy" />
-				</h:outputLabel>
-				
-			<p:panel id="pnl" header="Ultima Atualização" style="margin-top:10px">
-				<h:outputLabel value="#{paisController.pais.datetime}" />
-				<h:outputLabel>#{paisController.pais.datetime}</h:outputLabel>
-			</p:panel>
-		</p:dataTable>
-
-		<div align="center">
 			<h:outputLabel value="#{paisController.pais.datetime}" />
-			<h:outputLabel>#{paisController.pais.datetime}</h:outputLabel>
 		</div>
-		<br/>
+
+
+		<p:layout>
+		
+			<div align="center">
+				<p:layoutUnit position="west" header="Sites" resizable="true"
+					size="245">
+
+					<p:menu style="width 100%">
+						<p:menuitem value="Noticias COVID" url="https://www.gov.br/saude/pt-br" />
+						<p:menuitem value="COVID Pará" ur="https://www.covid-19.pa.gov.br/#/" />
+						<p:menuitem value="Mapa Geral COVID"
+							url="https://news.google.com/covid19/map?hl=pt-BR&mid;" />
+					</p:menu>
+
+				</p:layoutUnit>
+
+			</div>
+
+
+			<p:layoutUnit position="center" >
+				<h:form>
+					<p:dataTable id="tablevirus" value="#{paisController.estados}"
+					var="v" width="800px" style="width: auto;" paginator="true"
+					rows="15" widgetVar="tVirus"
+					paginatorTemplate="{CurrentPageReport} {FirstPageLink} {PreviousPageLink} {PageLinks} {NextPageLink} {LastPageLink} {RowsPerPageDropdown}"
+					currentPageReportTemplate="{startRecord}-{endRecord} of {totalRecords} records"
+					paginatorPosition="bottom" rowsPerPageTemplate="15">
+
+
+					<p:column sortBy="#{v.state}" filterBy="#{v.state}" filterMatchMode="contains">
+						<f:facet name="header">
+							<p:outputLabel value="Estado" />
+						</f:facet>
+						<h:outputLabel value="#{v.state}" />
+					</p:column>
+
+					<p:column sortBy="#{v.cases}">
+						<f:facet name="header">
+							<p:outputLabel value="Nº de Casos" />
+						</f:facet>
+						<h:outputLabel value="#{v.cases}" />
+					</p:column>
+
+					<p:column sortBy="#{v.deaths}">
+						<f:facet name="header">
+							<p:outputLabel value="Nº de Mortes" />
+						</f:facet>
+						<h:outputLabel value="#{v.deaths}" />
+					</p:column>
+
+					<p:column sortBy="#{v.suspects}">
+						<f:facet name="header">
+							<p:outputLabel value="Nº de Casos Suspeitos" />
+						</f:facet>
+						<h:outputLabel value="#{v.suspects}" />
+					</p:column>
+
+					<p:column sortBy="#{v.datetime}">
+						<f:facet name="header">
+							<p:outputLabel value="Atualiação" />
+						</f:facet>
+						<h:outputLabel value="#{v.datetime}">
+							<f:convertDateTime pattern="dd/MM/yyyy" />
+						</h:outputLabel>
+					</p:column>
+
+					<p:panel id="pnl" header="Ultima Atualização"
+						style="margin-top:10px">
+						<h:outputLabel value="#{paisController.pais.datetime}" />
+						<h:outputLabel>#{paisController.pais.datetime}</h:outputLabel>
+					</p:panel>
+				</p:dataTable>
+
+				<div align="center">
+					<h:outputLabel value="#{paisController.pais.datetime}" />
+					<h:outputLabel>#{paisController.pais.datetime}</h:outputLabel>
+				</div>
+				
+				</h:form>
+			</p:layoutUnit>
+
+		</p:layout>
+
 	</h:form>
 </h:body>
 </html>
