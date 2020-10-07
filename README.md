@@ -1,2 +1,3 @@
 # ProjetoAPICoronaVirus
-Api simplificada sobre os dados de COVID do país.
+
+Api simplificada que gera os dados de COVID do país.
