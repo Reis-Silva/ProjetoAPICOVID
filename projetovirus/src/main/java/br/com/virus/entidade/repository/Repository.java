@@ -4,16 +4,17 @@ import java.util.Arrays;
 
 import br.com.virus.entidade.datasource.Pais;
 
-public class VirusRepository {
+public class Repository {
 	
 	private Pais[] data;
-
-	public Pais[] getVirusEstado() {
+	
+	
+	public Pais[] getData() {
 		return data;
 	}
 
-	public void setVirusEstado(Pais[] virusEstado) {
-		this.data = virusEstado;
+	public void setData(Pais[] data) {
+		this.data = data;
 	}
 	
 	@Override

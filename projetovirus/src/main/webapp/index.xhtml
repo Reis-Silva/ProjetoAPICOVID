@@ -12,23 +12,17 @@
 	<title>COVID Brazil</title>
 </h:head>
 
-<div align="center">
-	<p:graphicImage library="img" name="virus.jpg" width="200"></p:graphicImage>
-</div>
+
 
 
 <h:body>
 	<h:form>
-
-		<br/>
-
+	
 		<div align="center">
-			
-			<p:commandButton value="Coletar Dados"
-				action="#{paisController.statusCovid}" update="@form" />
+			<p:graphicImage library="img" name="virus.jpg" width="300"></p:graphicImage>
+			<h:outputLabel>#{paisController.pais.datetime}</h:outputLabel>
 		</div>
-
-		<hr/>
+		<br/>
 		
 		<p:dataTable id="tablevirus" value="#{paisController.estados}" var="v" width="800px" style="width: auto;"
 			paginator="true" rows="15"  widgetVar="tVirus" 
@@ -37,7 +31,7 @@
 			paginatorPosition="bottom" rowsPerPageTemplate="15">
 
 
-			<p:column>
+			<p:column filterBy="#{v.state}" filterMatchMode="contains" >
 				<f:facet name="header">
 					<p:outputLabel value="Estado" />
 				</f:facet>
@@ -74,12 +68,21 @@
 				</h:outputLabel>
 			</p:column>
 
+			<h:outputLabel value="#{v.datetime}">
+					<f:convertDateTime pattern="dd/MM/yyyy" />
+				</h:outputLabel>
+				
 			<p:panel id="pnl" header="Ultima Atualização" style="margin-top:10px">
 				<h:outputLabel value="#{paisController.pais.datetime}" />
 				<h:outputLabel>#{paisController.pais.datetime}</h:outputLabel>
 			</p:panel>
 		</p:dataTable>
-		
+
+		<div align="center">
+			<h:outputLabel value="#{paisController.pais.datetime}" />
+			<h:outputLabel>#{paisController.pais.datetime}</h:outputLabel>
+		</div>
+		<br/>
 	</h:form>
 </h:body>
 </html>
