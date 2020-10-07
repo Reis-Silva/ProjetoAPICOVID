@@ -5,6 +5,7 @@ import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 import com.google.gson.Gson;
 import br.com.virus.entidade.datasource.Pais;
@@ -19,16 +20,46 @@ public class WEBStatus {
 		WEBStatus ws = new WEBStatus();
 		String url = "https://covid19-brazil-api.now.sh/api/report/v1?formato=json";
 		String json = ws.obterDados(url);
-
 		Gson g = new Gson();
 		Repository vr = new Repository();
 		vr = g.fromJson(json,Repository.class);
-
-		List<Pais> DadosCOVID = convertArrayToList(vr.getData());
-
-		return DadosCOVID;
+		
+		List<Pais> dadosCOVID = convertArrayToList(vr.getData());
+	
+		
+		/*WEBStatus ws2 = new WEBStatus();
+		String url2 = "https://covid19-brazil-api.now.sh/api/report/v1/brazil?formato=json";
+		String json2 = ws2.obterDados(url2);
+		Gson g2 = new Gson();
+		Repository vr2 = new Repository();
+		vr2 = g2.fromJson(json2,Repository.class);
+		System.out.println(json2);
+		List<Pais> dadosCOVIDGeral = convertArrayToList(vr2.getData());
+		
+		System.out.println(dadosCOVIDGeral);*/
+		
+		return dadosCOVID;
 	}
+	
+	//Armazenando dados Gerais
+		public static Date brazilCOVID() throws Exception {
+		
+			WEBStatus ws2 = new WEBStatus();
+			String url2 = "https://covid19-brazil-api.now.sh/api/report/v1/brazil/uf/sp";
+			String json2 = ws2.obterDados(url2);
+			Gson g2 = new Gson();
+			Pais vr2 = new Pais();
+			vr2 = g2.fromJson(json2,Pais.class);
+			System.out.println(json2);
+			System.out.println(vr2);
 
+			System.out.println(vr2.getDatetime());
+
+
+			return vr2.getDatetime();
+		
+	}
+	
 	
 	//Obtendo dados da URL 
 	public String obterDados(String url) throws Exception{
@@ -53,6 +84,8 @@ public class WEBStatus {
 		conn.disconnect();			
 		return response.toString();
 	}
+	
+	
 
 	
 	

@@ -23,7 +23,7 @@ public class PaisController implements Serializable{
 	// Iiniciando construção de lista
 	
 	@Inject
-	private Pais pais;
+	private Pais pais = new Pais();
 	
 	@Inject
 	private List<Pais> estados = new ArrayList<Pais>();	
@@ -50,6 +50,8 @@ public class PaisController implements Serializable{
 	public void init() {
 		try {
 			setEstados(WEBStatus.listarEstados());
+			pais.setDatetime(WEBStatus.brazilCOVID());
+			System.out.println("DateTIme"+ pais.getDatetime());
 			
 		} catch (Exception e) {
 			e.printStackTrace();

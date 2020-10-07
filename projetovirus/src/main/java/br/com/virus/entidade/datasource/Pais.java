@@ -2,6 +2,8 @@ package br.com.virus.entidade.datasource;
 
 import java.util.Date;
 
+
+
 public class Pais {
 	
 	 	private String uid;
@@ -11,8 +13,46 @@ public class Pais {
 	    private String deaths;
 	    private String suspects;
 	    private Date datetime;
+	    private String refuses;
 	    
+	    private String country;
+	    private String confirmed;
+	    private Date updated_at;
+	    private String recovered;
+
 		
+		public String getCountry() {
+			return country;
+		}
+		public void setCountry(String country) {
+			this.country = country;
+		}
+		public String getConfirmed() {
+			return confirmed;
+		}
+		public void setConfirmed(String confirmed) {
+			this.confirmed = confirmed;
+		}
+		public Date getUpdated_at() {
+			return updated_at;
+		}
+		public void setUpdated_at(Date updated_at) {
+			this.updated_at = updated_at;
+		}
+		public String getRecovered() {
+			return recovered;
+		}
+		public String getRefuses() {
+			return refuses;
+		}
+
+		public void setRefuses(String refuses) {
+			this.refuses = refuses;
+		}
+
+		public void setRecovered(String recovered) {
+			this.recovered = recovered;
+		}
 		public String getUid() {
 			return uid;
 		}
@@ -54,11 +94,6 @@ public class Pais {
 		}
 		public void setDatetime(Date datetime) {
 			this.datetime = datetime;
-		}
-	    
-		@Override
-		public String toString() {
-			return state + cases + datetime;
 		}
 		
 	    	    
