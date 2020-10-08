@@ -2,18 +2,18 @@ package br.com.virus.entidade.repository;
 
 import java.util.Arrays;
 
-import br.com.virus.entidade.datasource.Pais;
+import br.com.virus.entidade.datasource.Estados;
 
-public class Repository {
+
+public class EstadoRepository {
 	
-	private Pais[] data;
+	private Estados[] data;
 	
-	
-	public Pais[] getData() {
+	public Estados[] getData() {
 		return data;
 	}
 
-	public void setData(Pais[] data) {
+	public void setData(Estados[] data) {
 		this.data = data;
 	}
 	

@@ -34,12 +34,11 @@
 
 					<p:menu style="width 100%">
 						<p:menuitem value="COVID Pará"
-							url="https://www.covid-19.pa.gov.br/#/" />
+							url="https://www.covid-19.pa.gov.br/#/" target="_blank"/>
 						<p:menuitem value="Noticias COVID"
-							url="https://www.gov.br/saude/pt-br" />
+							url="https://www.gov.br/saude/pt-br" target="_blank" />
 						<p:menuitem value="Mapa Geral COVID"
-							url="https://news.google.com/covid19/map?hl=pt-BR&mid;" />
-
+							url="https://news.google.com/covid19/map?hl=pt-BR&mid;" target="_blank" />
 					</p:menu>
 					<br/>
 			
@@ -98,7 +97,10 @@
 					
 					<div align="center">
 						<p:staticMessage severity="info" summary="Ultima Atualização: "
-							detail="#{paisController.pais.datetime}" />
+							detail="#{paisController.pais.data.updated_at}" />
+						<p:staticMessage severity="error" summary="Nº de Casos Confirmados do Brasil:"
+							detail="#{paisController.pais.data.confirmed}" />
+						<p:staticMessage severity="warn" summary="Nº de Casos Recuperados do Brasil:" detail="#{paisController.pais.data.recovered}" />	
 					</div>
 				</h:form>
 			</p:layoutUnit>
