@@ -14,4 +14,4 @@ Api simplificada desenvolvida para a coleta de dados da COVID-19 (Brazil e outro
 
 ##### OBS2: Para os outros paises apenas é possível visualizar os dados gerais.
 
-##### OBS: Utilização da IDE Eclipse EE
+##### OBS3: Utilização da IDE Eclipse EE
