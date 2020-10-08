@@ -25,6 +25,20 @@ public class PaisController implements Serializable {
 
 	@Inject
 	private PaisRepository pais;
+	
+	@Inject
+	private PaisRepository paisExterno;
+	
+	@Inject
+	private String inputPais;
+
+	public String getInputPais() {
+		return inputPais;
+	}
+
+	public void setInputPais(String inputPais) {
+		this.inputPais = inputPais;
+	}
 
 	@Inject
 	private List<Estados> estados;
@@ -37,14 +51,6 @@ public class PaisController implements Serializable {
 		this.estado = estado;
 	}
 
-	public List<Estados> getEstados() {
-		return estados;
-	}
-
-	public void setEstados(List<Estados> estados) {
-		this.estados = estados;
-	}
-
 	public PaisRepository getPais() {
 		return pais;
 	}
@@ -53,6 +59,28 @@ public class PaisController implements Serializable {
 		this.pais = pais;
 	}
 
+	public PaisRepository getPaisExterno() {
+		return paisExterno;
+	}
+
+	public void setPaisExterno(PaisRepository paisExterno) {
+		this.paisExterno = paisExterno;
+	}
+
+	public List<Estados> getEstados() {
+		return estados;
+	}
+
+	public void setEstados(List<Estados> estados) {
+		this.estados = estados;
+	}
+
+	public void pesquisaExterna() throws Exception {
+		
+		paisExterno = WEBStatus.paisesDetalhes(inputPais);
+	}
+	
+	
 	// Inicio automático da página
 	@PostConstruct
 	public void init() {
