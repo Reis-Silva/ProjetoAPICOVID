@@ -60,6 +60,20 @@
 					</p:menu>
 					<hr />
 
+
+					<h:outputLabel value="Júlio César Reis da Silva" />
+					<br />
+					<h:outputLabel value="Developer" />
+					<br />
+
+					<p:graphicImage library="img" name="git.jpeg" width="200" />
+					<br />
+					<h:outputLabel value="github.com/Reis-Silva" />
+					<p:panelGrid columns="1">
+
+
+
+					</p:panelGrid>
 				</p:layoutUnit>
 
 			</div>
@@ -113,13 +127,12 @@
 					</p:dataTable>
 					<hr />
 				</h:form>
-				
+
 				<div align="center">
-					<br/>
+					<br />
 					<h:outputLabel
 						value="Insira o nome de outro País para a pesquisa de CASOS GERAIS" />
-					<br/>
-					<br/>
+					<br /> <br />
 					<p:inputText value="#{paisController.inputPais}"
 						placeholder="Insira o nome aqui" />
 					<p:commandButton value="Buscar"
@@ -137,10 +150,10 @@
 						<p:staticMessage severity="info" summary="Ultima Atualização: "
 							detail="#{paisController.paisExterno.data.updated_at}" />
 						<hr />
-						
-						
+
+
 					</h:panelGrid>
-						<h6>Exemplo: Angola, Canada ou Mexico</h6>
+					<h6>Exemplo: Angola, Canada ou Mexico</h6>
 				</div>
 
 			</p:layoutUnit>
