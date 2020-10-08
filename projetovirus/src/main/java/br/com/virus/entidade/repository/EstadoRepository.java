@@ -4,7 +4,7 @@ import java.util.Arrays;
 
 import br.com.virus.entidade.datasource.Estados;
 
-//Dados dos Estados do Brazil
+//Dados dos Estados
 public class EstadoRepository {
 	
 	private Estados[] data;
