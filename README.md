@@ -15,7 +15,7 @@ Api simplificada desenvolvida para a coleta de dados da COVID-19 (Brazil e outro
 
 ##### [2] - Dados recorrentes de dependencias encontram-se em (Apache Maven): https://github.com/Reis-Silva/ProjetoAPICOVID/blob/main/projetovirus/pom.xml
 
-[3] - Conexão com Microsoft SQLServer Management Studio (8 - v18.6). Dados recorrentes de conexão com a api-JSON encomtra-se na class "WEBStatus": https://github.com/Reis-Silva/ProjetoAPICOVID/blob/main/projetovirus/src/main/java/br/com/virus/service/WEBStatus.java
+[3] - Dados recorrentes de conexão com a api-JSON encontram-se na class "WEBStatus": https://github.com/Reis-Silva/ProjetoAPICOVID/blob/main/projetovirus/src/main/java/br/com/virus/service/WEBStatus.java
 
 
 ## Observações:
