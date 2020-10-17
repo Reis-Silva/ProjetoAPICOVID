@@ -4,7 +4,9 @@ Api simplificada desenvolvida para a coleta de dados da COVID-19 (Brazil e outro
 
 ## Source
 
-[![COVID-19 Brazil API](https://covid19-brazil-api.now.sh/logo.svg)](https://covid19-brazil-api.now.sh/)
+<p align="center">
+<a name="top" href="https://covid19-brazil-api.now.sh/"><img src="https://covid19-brazil-api.now.sh/logo.svg" width="250"></a>
+</p>
 
 ## Features
 
