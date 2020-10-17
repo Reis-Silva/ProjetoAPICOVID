@@ -1,10 +1,11 @@
-# ProjetoAPICoronaVirus
+# Projeto API Coronavírus
 
 Api simplificada desenvolvida para a coleta de dados da COVID-19 (Brazil e outros pais).
 
 ## Source
 
 <p align="center">
+<b>COVID-19 Brazil API</b><br> 
 <a name="top" href="https://covid19-brazil-api.now.sh/"><img src="https://covid19-brazil-api.now.sh/logo.svg" width="250"></a>
 </p>
 
