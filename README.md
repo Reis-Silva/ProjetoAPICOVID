@@ -2,12 +2,6 @@
 
 Api simplificada desenvolvida para a coleta de dados da COVID-19 (Brazil e outros pais).
 
-
-### TELA DE CAPTURA DA API COVID-19 CRIADA:
-<p align="center">
-<img src="https://github.com/Reis-Silva/ProjetoAPICOVID/blob/main/projetovirus/src/main/webapp/resources/img/demo.png">
-</p>
-
 ## Source
 
 [![COVID-19 Brazil API](https://covid19-brazil-api.now.sh/logo.svg)](https://covid19-brazil-api.now.sh/)
@@ -21,6 +15,11 @@ Api simplificada desenvolvida para a coleta de dados da COVID-19 (Brazil e outro
 - Dados recorrentes de dependencias do projeto podem ser utilizadas de acordo como está definido no Link do pom.xml: https://github.com/Reis-Silva/ProjetoAPICOVID/blob/main/projetovirus/pom.xml desde de que esteja dentro das versões do JavaSE.
 
  - Dados recorrentes de conexão com a api-JSON encontram-se na class "WEBStatus": https://github.com/Reis-Silva/ProjetoAPICOVID/blob/main/projetovirus/src/main/java/br/com/virus/service/WEBStatus.java
+ 
+### TELA DE CAPTURA DA API COVID-19 CRIADA:
+<p align="center">
+<img src="https://github.com/Reis-Silva/ProjetoAPICOVID/blob/main/projetovirus/src/main/webapp/resources/img/demo.png">
+</p>
 
 ## Observações:
 
