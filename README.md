@@ -3,12 +3,12 @@
 Api simplificada desenvolvida para a coleta de dados da COVID-19 (Brazil e outros pais).
 
 
-#### TELA DE CAPTURA DA API COVID-19:
+### TELA DE CAPTURA DA API COVID-19 CRIADA:
 <p align="center">
 <img src="https://github.com/Reis-Silva/ProjetoAPICOVID/blob/main/projetovirus/src/main/webapp/resources/img/demo.png">
 </p>
 
-#### Fonte
+## Fonte
 
 [![COVID-19 Brazil API](https://covid19-brazil-api.now.sh/logo.svg)](https://covid19-brazil-api.now.sh/)
 
