@@ -1,6 +1,6 @@
-# Projeto API Coronavírus
+# Projeto Coronavírus
 
-Api simplificada desenvolvida para a coleta de dados da COVID-19 (Brazil e outros pais).
+Projeto desenvolvido para a coleta de dados da COVID-19 (Brazil e outros pais) apartir do consumo da API criada pelo contribuidores `Lucas Vieira` e `Arthur Ribeiro`. Link: https://github.com/devarthurribeiro/covid19-brazil-api/#contribuidores.
 
 ## Source
 
