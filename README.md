@@ -11,7 +11,7 @@ Projeto desenvolvido para a coleta de dados da COVID-19 (Brazil e outros pais) a
 
 ## Features
 
-- Suporte no JavaSE-1.8 em diante podendo ser utilizado o jdk nas versões `11.x, 12.x, 13.x, 14.x, 15.x`.
+- Suporte no JavaSE-8 em diante podendo ser utilizado o jdk nas versões `11.x, 12.x, 13.x, 14.x, 15.x`.
 
 - Suporte no Servidor Apache Tomcat versões `7.x, 8.x, 9.x`, aconselhável a versão `9.x` - Link: https://github.com/Reis-Silva/ProjetoAPICOVID/blob/main/projetovirus/pom.xml
 
